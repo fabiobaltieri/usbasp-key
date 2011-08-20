@@ -22,20 +22,20 @@ the newest features and options.
 
 /* ---------------------------- Hardware Config ---------------------------- */
 
-#define USB_CFG_IOPORTNAME      B
+#define USB_CFG_IOPORTNAME      D
 /* This is the port where the USB bus is connected. When you configure it to
  * "B", the registers PORTB, PINB and DDRB will be used.
  */
-#define USB_CFG_DMINUS_BIT      0
+#define USB_CFG_DMINUS_BIT      4
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
  */
-#define USB_CFG_DPLUS_BIT       1
+#define USB_CFG_DPLUS_BIT       2
 /* This is the bit number in USB_CFG_IOPORT where the USB D+ line is connected.
  * This may be any bit in the port. Please note that D+ must also be connected
  * to interrupt pin INT0!
  */
-/* #define USB_CFG_CLOCK_KHZ       (F_CPU/1000) */
+#define USB_CFG_CLOCK_KHZ       (F_CPU/1000)
 /* Clock rate of the AVR in MHz. Legal values are 12000, 16000 or 16500.
  * The 16.5 MHz version of the code requires no crystal, it tolerates +/- 1%
  * deviation from the nominal frequency. All other rates require a precision
