@@ -1,0 +1,5 @@
+*.o
+main.hex
+main.bin
+main.map
+hardware/*.?#?
