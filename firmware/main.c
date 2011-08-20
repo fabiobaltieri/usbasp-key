@@ -219,13 +219,12 @@ int main(void) {
 	uchar i, j;
 
 	/* no pullups on USB and ISP pins */
-	PORTD = 0;
+	PORTD = _BV(PD7);
 	PORTB = 0;
-	/* all outputs except PD2 = INT0 */
-	DDRD = ~(1 << 2);
+	PORTC = _BV(PC2) | _BV(PC3);
+	DDRD |= _BV(PD2) | _BV(PD4) | _BV(PD7);
+	DDRC |= _BV(PC3);
 
-	/* output SE0 for USB reset */
-	DDRB = ~0;
 	j = 0;
 	/* USB Reset by device only required on Watchdog Reset */
 	while (--j) {
@@ -235,11 +234,9 @@ int main(void) {
 			;
 	}
 	/* all USB and ISP pins inputs */
-	DDRB = 0;
+	DDRD &= ~(_BV(PD2) | _BV(PD4));
 
-	/* all inputs except PC0, PC1 */
-	DDRC = 0x03;
-	PORTC = 0xfe;
+	ledGreenOn();
 
 	/* init timer */
 	clockInit();
