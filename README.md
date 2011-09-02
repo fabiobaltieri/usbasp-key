@@ -19,10 +19,10 @@ the Free Software Foundation, either version 2 of the License, or
 Contents
 --------
 
-COPYING     text version of the GPL
-README      this file
-firmware/   source directory for firmware files
-hardware/   source directory for the hardware design files
+    COPYING     text version of the GPL
+    README      this file
+    firmware/   source directory for firmware files
+    hardware/   source directory for the hardware design files
 
 Firmware
 --------
@@ -30,17 +30,17 @@ Firmware
 Building requires an avr-gcc toolchain, in the firmware/ directory, to build
 run:
 
-  make main.hex
+    make main.hex
 
 Flashing the firmware on the device requires avrdude and a compatible hardware
 programmer. Default configuration is stored at the beginning of the Makefile.
 To program with the default configuration, run:
 
-  make flash
+    make flash
 
 Fuses can be configured running:
 
-  make fuses
+    make fuses
 
 Hardware
 --------
