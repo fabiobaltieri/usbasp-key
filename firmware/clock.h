@@ -1,11 +1,14 @@
 /*
- * clock.h - part of USBasp
+ * Copyright 2011 Fabio Baltieri (fabio.baltieri@gmail.com)
  *
- * Autor..........: Thomas Fischl <tfischl@gmx.de>
- * Description....: Provides functions for timing/waiting
- * Licence........: GNU GPL v2 (see Readme.txt)
- * Creation Date..: 2005-02-23
- * Last change....: 2006-11-16
+ * Based on the original USBasp code written by
+ *   Thomas Fischl <tfischl@gmx.de>, Copyright 2005
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
  */
 
 #ifndef __clock_h_included__

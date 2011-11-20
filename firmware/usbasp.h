@@ -1,11 +1,14 @@
 /*
- * usbasp.c - part of USBasp
+ * Copyright 2011 Fabio Baltieri (fabio.baltieri@gmail.com)
  *
- * Autor..........: Thomas Fischl <tfischl@gmx.de>
- * Description....: Definitions and macros for usbasp
- * Licence........: GNU GPL v2 (see Readme.txt)
- * Creation Date..: 2009-02-28
- * Last change....: 2009-02-28
+ * Based on the original USBasp code written by
+ *   Thomas Fischl <tfischl@gmx.de>, Copyright 2009
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
  */
 
 #ifndef USBASP_H_

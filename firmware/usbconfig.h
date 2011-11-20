@@ -1,10 +1,15 @@
-/* Name: usbconfig.h
- * Project: AVR USB driver
- * Author: Christian Starkjohann, Thomas Fischl
- * Creation Date: 2005-04-01
- * Tabsize: 4
- * Copyright: (c) 2005 by OBJECTIVE DEVELOPMENT Software GmbH
- * License: GNU GPL v2 (see License.txt) or proprietary (CommercialLicense.txt)
+/*
+ * Copyright 2011 Fabio Baltieri (fabio.baltieri@gmail.com)
+ *
+ * Based on the original USBasp code written by
+ *   Christian Starkjohann, Copyright 2005, OBJECTIVE DEVELOPMENT Software GmbH
+ *   Thomas Fischl <tfischl@gmx.de>, Copyright 2005
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
  */
 
 #ifndef __usbconfig_h_included__
