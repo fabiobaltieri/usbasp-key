@@ -21,6 +21,7 @@ Contents
 
     COPYING     text version of the GPL
     README      this file
+    binaries/   pre-built firmware images in hex format
     firmware/   source directory for firmware files
     hardware/   source directory for the hardware design files
 
