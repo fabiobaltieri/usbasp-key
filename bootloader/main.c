@@ -217,17 +217,28 @@ uchar   i = 0;
 
 int __attribute__((noreturn)) main(void)
 {
+    uint16_t blink;
+    volatile int zero = 0;
+
     /* initialize hardware */
-    bootLoaderInit();
+    PORTC |= _BV(PC2);
+
+    _delay_us(30);
+
     odDebugInit();
     DBG1(0x00, 0, 0);
     /* jump to application if jumper is set */
-    if(bootLoaderCondition()){
+    if (pgm_read_byte(zero) == 0xff ||
+	(PINC & _BV(PC2)) == 0) {
         uchar i = 0, j = 0;
 #ifndef TEST_MODE
         GICR = (1 << IVCE);  /* enable change of interrupt vectors */
         GICR = (1 << IVSEL); /* move interrupts to boot flash section */
 #endif
+
+	DDRC |= _BV(PC3);
+	DDRD |= _BV(PD7);
+
         initForUsbConnectivity();
         do{ /* main event loop */
             wdt_reset();
@@ -243,7 +254,12 @@ int __attribute__((noreturn)) main(void)
                 }
             }
 #endif
-        }while(bootLoaderCondition());
+	    if (blink++ == 50000) {
+		PORTC ^= _BV(PC3);
+		PORTD ^= _BV(PD7);
+		blink = 0;
+	    }
+        } while (1);
     }
     leaveBootloader();
 }

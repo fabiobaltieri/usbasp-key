@@ -43,7 +43,7 @@ these macros are defined, the boot loader usees them.
 /* This is the port where the USB bus is connected. When you configure it to
  * "B", the registers PORTB, PINB and DDRB will be used.
  */
-#define USB_CFG_DMINUS_BIT      0
+#define USB_CFG_DMINUS_BIT      4
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
  */
@@ -92,30 +92,5 @@ these macros are defined, the boot loader usees them.
  * this saves quite a bit of flash. See Alexander Neumann's boot loader for
  * an example: http://git.lochraster.org:2080/?p=fd0/usbload;a=tree
  */
-
-/* ------------------------------------------------------------------------- */
-
-/* Example configuration: Port D bit 3 is connected to a jumper which ties
- * this pin to GND if the boot loader is requested. Initialization allows
- * several clock cycles for the input voltage to stabilize before
- * bootLoaderCondition() samples the value.
- * We use a function for bootLoaderInit() for convenience and a macro for
- * bootLoaderCondition() for efficiency.
- */
-
-#ifndef __ASSEMBLER__   /* assembler cannot parse function definitions */
-#include <util/delay.h>
-
-static inline void  bootLoaderInit(void)
-{
-    PORTD = 1 << 3; /* activate pull-up for key */
-    _delay_us(10);  /* wait for levels to stabilize */
-}
-
-#define bootLoaderCondition()   ((PIND & (1 << 3)) == 0)   /* True if jumper is set */
-
-#endif
-
-/* ------------------------------------------------------------------------- */
 
 #endif /* __bootloader_h_included__ */
