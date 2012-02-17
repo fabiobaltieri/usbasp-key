@@ -14,11 +14,13 @@
 #     make flash   # to load the boot loader into flash
 #     make lock    # to protect the boot loader from overwriting
 
-DEVICE = atmega8
-BOOTLOADER_ADDRESS = 1800
+DEVICE = atmega168
+BOOTLOADER_ADDRESS = 3800
 F_CPU = 12000000
-FUSEH = 0xc0
-FUSEL = 0x9f
+FUSEH = 0xdf
+FUSEL = 0xef
+FUSEE = 0xf8
+LOCK  = 0xcf
 # Fuse high byte:
 # 0xc0 = 1 1 0 0   0 0 0 0 <-- BOOTRST (boot reset vector at 0x1800)
 #        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
@@ -38,7 +40,7 @@ FUSEL = 0x9f
 
 ###############################################################################
 
-AVRDUDE = avrdude -c stk500v2 -P avrdoper -p $(DEVICE)
+AVRDUDE = avrdude -c usbasp -P usb -p $(DEVICE)
 
 LDFLAGS += -Wl,--relax,--gc-sections -Wl,--section-start=.text=$(BOOTLOADER_ADDRESS)
 
@@ -67,13 +69,13 @@ all:	main.hex
 	$(COMPILE) -S $< -o $@
 
 flash:	all
-	$(AVRDUDE) -U flash:w:main.hex:i
+	$(AVRDUDE) -U flash:w:main.hex:i -U lock:w:$(LOCK):m
 
 readflash:
 	$(AVRDUDE) -U flash:r:read.hex:i
 
 fuse:
-	$(AVRDUDE) -U hfuse:w:$(FUSEH):m -U lfuse:w:$(FUSEL):m
+	$(AVRDUDE) -U hfuse:w:$(FUSEH):m -U lfuse:w:$(FUSEL):m -U efuse:w:$(FUSEE):m
 
 lock:
 	$(AVRDUDE) -U lock:w:0x2f:m
