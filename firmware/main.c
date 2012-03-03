@@ -227,12 +227,12 @@ int main(void) {
 	usbInit();
 	usbDeviceDisconnect();
 
-	i = 0;
-	while (--i) {
-		_delay_ms(1);
+	for (i = 0; i < 5; i++) {
+		ledGreenOff();
+		_delay_ms(50);
+		ledGreenOn();
+		_delay_ms(50);
 	}
-
-	ledGreenOn();
 
 	/* init timer */
 	clockInit();
