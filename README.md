@@ -1,6 +1,7 @@
 USBASP KEY
 ==========
 
+http://fabiobaltieri.com/2011/09/02/usb-key-avr-programmer/
 
 This project is an AVR ISP programmer with USB interface in a compact usb
 key PCB. The project is based on the original USBasp version of Thomas Fischl,
