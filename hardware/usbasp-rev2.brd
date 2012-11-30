@@ -665,7 +665,7 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="37.592" y="-25.7556" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R7" library="rcl" package="R0805" value="10" x="23.7744" y="2.032"/>
-<element name="U1" library="SparkFun-PowerIC" package="SOT23-5" value="MIC2551" x="7.7216" y="2.032" rot="R270"/>
+<element name="U1" library="SparkFun-PowerIC" package="SOT23-5" value="MIC5301" x="7.7216" y="2.032" rot="R270"/>
 <element name="C6" library="rcl" package="C0603" value=".1u" x="11.3792" y="1.016"/>
 <element name="C7" library="rcl" package="C0603" value=".1u" x="7.7216" y="4.064"/>
 <element name="Y1" library="SparkFun-FreqCtrl" package="CRYSTAL-SMD-5X3" value="12MHz" x="14.4272" y="2.6416" rot="MR0"/>

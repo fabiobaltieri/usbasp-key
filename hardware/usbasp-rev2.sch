@@ -8707,7 +8707,7 @@ Sourc: www.ctscorp.com</description>
 <part name="P+8" library="supply1" deviceset="VCC" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LDO" device="SMD" value="MIC2551"/>
+<part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LDO" device="SMD" value="MIC5301"/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C0603" value=".1u"/>
