@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -110,7 +110,7 @@
 <wire x1="29.6672" y1="12.9032" x2="27.1272" y2="15.4432" width="0" layer="20" curve="90"/>
 <wire x1="27.1272" y1="15.4432" x2="2.54" y2="15.4432" width="0" layer="20"/>
 <wire x1="2.54" y1="15.4432" x2="0" y2="12.9032" width="0" layer="20" curve="90"/>
-<text x="19.304" y="13.4112" size="1.4224" layer="121">FB2012</text>
+<text x="19.304" y="13.4112" size="1.4224" layer="121">FB2013</text>
 <text x="23.9776" y="13.4112" size="1.4224" layer="122" rot="MR0">usbasp-key</text>
 <text x="23.9776" y="11.7856" size="1.4224" layer="122" rot="MR0">rev2</text>
 </plain>
