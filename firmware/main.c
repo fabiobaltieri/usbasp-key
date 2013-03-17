@@ -218,11 +218,13 @@ int main(void) {
 	uchar i;
 
 	/* no pullups on USB and ISP pins */
-	PORTD = _BV(PD7);
 	PORTB = 0;
-	PORTC = _BV(PC2) | _BV(PC3);
+	PORTC = _BV(PC2);
 	DDRD |= _BV(PD7);
 	DDRC |= _BV(PC3);
+
+	ledRedOff();
+	ledGreenOn();
 
 	usbInit();
 	usbDeviceDisconnect();
