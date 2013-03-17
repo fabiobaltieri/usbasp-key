@@ -43,7 +43,7 @@ static uchar            exitMainloop;
 #endif
 
 
-PROGMEM char usbHidReportDescriptor[33] = {
+const PROGMEM char usbHidReportDescriptor[33] = {
     0x06, 0x00, 0xff,              // USAGE_PAGE (Generic Desktop)
     0x09, 0x01,                    // USAGE (Vendor Usage 1)
     0xa1, 0x01,                    // COLLECTION (Application)
