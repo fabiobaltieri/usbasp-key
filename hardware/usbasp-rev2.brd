@@ -652,10 +652,10 @@ design rules under a new name.</description>
 <element name="R3" library="rcl" package="R0603" value="68" x="7.5184" y="7.7216" rot="R180"/>
 <element name="R4" library="rcl" package="R0603" value="68" x="7.5184" y="9.3472" rot="R180"/>
 <element name="C5" library="rcl" package="C0603" value=".1u" x="14.6304" y="7.9248" rot="MR180"/>
-<element name="WRITE" library="led" package="CHIP-LED0805" value="" x="27.432" y="3.048" rot="R90"/>
-<element name="ACTIVE" library="led" package="CHIP-LED0805" value="" x="27.432" y="12.3952" rot="R90"/>
-<element name="R5" library="rcl" package="R0603" value="1k" x="27.432" y="3.048" rot="MR180"/>
-<element name="R6" library="rcl" package="R0603" value="1k" x="27.432" y="12.3952" rot="MR180"/>
+<element name="WRITE" library="led" package="CHIP-LED0805" value="GREEN" x="27.432" y="3.048" rot="R90"/>
+<element name="ACTIVE" library="led" package="CHIP-LED0805" value="RED" x="27.432" y="12.3952" rot="R90"/>
+<element name="R5" library="rcl" package="R0603" value="470" x="27.432" y="3.048" rot="MR180"/>
+<element name="R6" library="rcl" package="R0603" value="470" x="27.432" y="12.3952" rot="MR180"/>
 <element name="IC1" library="avr" package="TQFP32-08" value="ATMEGA8-16A" x="14.8336" y="7.7216"/>
 <element name="D2" library="sparkfun" package="SMA-DIODE" value="3V6" x="7.5184" y="4.6736" rot="MR90"/>
 <element name="D1" library="sparkfun" package="SMA-DIODE" value="3V6" x="7.5184" y="10.7696" rot="MR270"/>
@@ -667,7 +667,7 @@ design rules under a new name.</description>
 <element name="TP2" library="testpad" package="B1,27" value="TPB1,27" x="12.192" y="13.6144">
 <attribute name="TP_SIGNAL_NAME" value="" x="37.592" y="-25.7556" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R7" library="rcl" package="R0805" value="10" x="23.7744" y="2.032"/>
+<element name="R7" library="rcl" package="R0805" value="1" x="23.7744" y="2.032"/>
 <element name="U1" library="SparkFun-PowerIC" package="SOT23-5" value="MIC5301" x="7.7216" y="2.032" rot="R270"/>
 <element name="C6" library="rcl" package="C0603" value=".1u" x="11.3792" y="1.016"/>
 <element name="C7" library="rcl" package="C0603" value=".1u" x="7.7216" y="4.064"/>
@@ -681,7 +681,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="4.1148" y="28.0416" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="4.1148" y="28.0416" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R8" library="rcl" package="R0603" value="1k" x="21.7424" y="9.144" rot="MR315"/>
+<element name="R8" library="rcl" package="R0603" value="4k7" x="21.7424" y="9.144" rot="MR315"/>
 <element name="R9" library="rcl" package="R0603" value="1k" x="20.7264" y="6.9088" rot="MR225"/>
 </elements>
 <signals>
@@ -1043,18 +1043,6 @@ design rules under a new name.</description>
 <wire x1="21.141359375" y1="9.338640625" x2="20.5232" y2="9.9568" width="0.2032" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,79d1e5d510f6f4be"/>
-<approved hash="4,1,58f8d6d845780323"/>
-<approved hash="4,1,9ffa88d522227f51"/>
-<approved hash="4,1,748c29c53f5f206a"/>
-<approved hash="5,1,b7088d521eed3c7b"/>
-<approved hash="5,1,0aea709fa232bf8d"/>
-<approved hash="4,16,79d1e5d510f6f4be"/>
-<approved hash="4,16,58f8d6d845780323"/>
-<approved hash="4,16,9ffa88d522227f51"/>
-<approved hash="4,16,748c29c53f5f206a"/>
-</errors>
 </board>
 </drawing>
 </eagle>

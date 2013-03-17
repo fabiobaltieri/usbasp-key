@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -8683,11 +8683,11 @@ Sourc: www.ctscorp.com</description>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="68"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603" value=".1u"/>
-<part name="WRITE" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="ACTIVE" library="led" deviceset="LED" device="CHIP-LED0805"/>
+<part name="WRITE" library="led" deviceset="LED" device="CHIP-LED0805" value="GREEN"/>
+<part name="ACTIVE" library="led" deviceset="LED" device="CHIP-LED0805" value="RED"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="470"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="470"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="avr" deviceset="ATMEGA8" device="A" technology="-16"/>
@@ -8697,7 +8697,7 @@ Sourc: www.ctscorp.com</description>
 <part name="ISP1" library="balto" deviceset="ISP-AVR910" device="SMD"/>
 <part name="TP1" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="TP2" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="10"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="1"/>
 <part name="LICENSE1" library="balto" deviceset="CC_BY-SA" device="" value="Fabio Baltieri"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -8722,7 +8722,7 @@ Sourc: www.ctscorp.com</description>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value=".1u"/>
 <part name="JP1" library="SparkFun-Passives" deviceset="JUMPER-2" device="SMD-NO-NS"/>
 <part name="S1" library="switch-dil" deviceset="219-02*" device="J"/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="4k7"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 </parts>
